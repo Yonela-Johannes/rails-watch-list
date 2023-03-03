@@ -6,7 +6,7 @@
       <%= image_tag(movie.post_url, :class => "card-img-top") %>
       <%= (movie.title) %>
       <%= (movie.overview )  %>
-      <%# <%= link_to "Show details", movie_index_path(@movie_show) %> %>
+      <%= link_to "Show details", show_path(movie.id) %>
     <% end %>
   </div>
 </div>
