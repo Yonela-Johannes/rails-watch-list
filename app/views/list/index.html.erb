@@ -1,0 +1,6 @@
+<div class="container">
+  <h1>List#index</h1>
+    <%@list.each do |l|  %>
+      <%= link_to l.name, list_show_path(l.id) %>
+    <% end %>
+</div>
