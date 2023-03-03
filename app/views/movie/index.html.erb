@@ -1,0 +1,12 @@
+
+<div class="container">
+  <h1>Movie#index</h1>
+  <div class="card" style="width: 18rem;">
+    <%@movies.each do |movie|  %>
+      <%= image_tag(movie.post_url, :class => "card-img-top") %>
+      <%= (movie.title) %>
+      <%= (movie.overview )  %>
+      <%# <%= link_to "Show details", movie_index_path(@movie_show) %> %>
+    <% end %>
+  </div>
+</div>
