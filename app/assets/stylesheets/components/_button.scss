@@ -1,0 +1,14 @@
+
+
+button{
+  outline: none;
+  border: 1px solid gray;
+  color: gray;
+  padding: 10px 20px;
+  transition: .2s ease;
+  cursor: pointer;
+  &:hover{
+    color: black;
+    border-color: black;
+  }
+}

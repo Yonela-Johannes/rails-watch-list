@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsWatchList</title>
+    <title>FM</title>
+
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
   <body>
-  <div class="container">
-    <div class="nav">
-    <h1>Logo</h1>
-    <div class="">
-      <a href="/list" class="">My List</a>
-      <a href="/new" class="">New List</a>
+  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+    <div class="container-fluid">
+    <div class="logo"></div>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <a href="/list" class="">My List</a>
+        <a href="/new" class="">New List</a>
+          </div>
+        </div>
     </div>
-  </div>
-
-  </div>
-    <%= yield %>
+    <div class="main-content">
+      <%= yield %>
+    </div>
   </body>
 </html>

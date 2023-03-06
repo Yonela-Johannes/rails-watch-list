@@ -1,6 +1,11 @@
 <div class="container">
-  <h1>List#index</h1>
+  <h1>Playlists</h1>
     <%@list.each do |l|  %>
-      <%= link_to l.name, list_show_path(l.id) %>
+    <div class="card-product">
+    <%= image_tag("") %>
+      <div class="card-product-infos">
+        <h2><%= link_to l.name, list_show_path(l.id) %></h2>
+      </div>
+    </div>
     <% end %>
 </div>

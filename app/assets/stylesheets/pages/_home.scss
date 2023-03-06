@@ -1,1 +1,13 @@
 // Specific CSS for your home-page
+
+.list{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  .list-content{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 300px;
+  }
+}

@@ -2,3 +2,5 @@
 import "@hotwired/turbo-rails"
 import "./controllers"
 import "bootstrap";
+
+console.log("This is actually working bro!!!")

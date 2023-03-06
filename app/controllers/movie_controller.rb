@@ -3,6 +3,9 @@ class MovieController < ApplicationController
   protect_from_forgery
   def index
     @movies = Movie.all
+    l = @movies.count
+    index = rand(0..l)
+    @movie = @movies[index]
   end
 
   def show

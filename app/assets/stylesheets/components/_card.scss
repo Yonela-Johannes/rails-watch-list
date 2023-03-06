@@ -1,0 +1,118 @@
+.wrap-cards{
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+  text-align: start;
+}
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+  align-items: center;
+  justify-content: space-around;
+
+  .card{
+    width: 302px;
+    height: 380px;
+    cursor: pointer;
+    margin-bottom: 50px;
+    border-radius: 5px;
+    transition: .2s ease;
+
+    img{
+      width: 300px;
+      height: 260px;
+      border-top-right-radius: 5px;
+      border-top-left-radius: 5px;
+    }
+
+    .title {
+      font-size: 18px;
+      margin: 0;
+      padding: 2px 8px;
+      color: black;
+
+    }
+
+    .sub{
+      margin: 0;
+      padding: 2px 8px;
+      color: grey;
+    }
+
+    .card-bottom {
+      padding: 2px 8px;
+      a{
+        color: rgb(66, 66, 66);
+        font-size: 16px;
+      }
+    }
+    &:hover{
+      border-color:rgba(0, 0, 0, 0.548);
+    }
+  }
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+.card-product {
+  overflow: hidden;
+  height: 120px;
+  background: white;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  img {
+   height: 100%;
+   width: 120px;
+   object-fit: cover;
+  }
+  h2 {
+   font-size: 16px;
+   font-weight: bold;
+   margin: 0;
+
+   a{
+    color: black;
+   }
+  }
+
+  .card-product-infos {
+   padding: 16px;
+ }
+}

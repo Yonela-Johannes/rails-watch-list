@@ -1,8 +1,20 @@
-<div class="container">
-  <h1>Movie#show</h1>
-      <%= image_tag(@movie.post_url, :class => "img-fluid") %>
-      <%= (@movie.title) %>
-      <%= (@movie.overview )  %>
-      <%= link_to "back home", movie_index_path %>
+<div class="div">
+  <div class="home-banner-image">
+    <%= image_tag(@movie.post_url, :class => "img-fluid") %>
+    <div class="wrap">
+      <div class="content">
+        <h1><%= (@movie.title) %></h1>
+        <p><%= (@movie.overview ) %></p>
+        <p class="rating"><%= (@movie.rating) %></p>
+      </div>
+    </div>
   </div>
+    <div class="details">
+      <h4><%= (@movie.title) %></h4>
+      <p><%= (@movie.overview )  %></p>
+      <p class="rating"><%= (@movie.rating) %></p>
+      <button>Add to list</button>
+      <button>Add Review</button>
+      <%= link_to "Go back", movie_index_path %>
+    </div>
 </div>

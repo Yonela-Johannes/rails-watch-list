@@ -1,11 +1,28 @@
-<div class="container">
-  <h1>Movie#index</h1>
-  <div class="card" style="width: 18rem;">
+<div class="home-banner-image">
+      <%= image_tag(@movie.post_url, :class => "img-fluid") %>
+      <div class="wrap">
+        <div class="content">
+          <h1><%= (@movie.title) %></h1>
+          <p><%= (@movie.overview ) %></p>
+          <p class="rating"><%= (@movie.rating) %></p>
+        </div>
+      </div>
+  </div>
+</div>
+
+<div class="wrap-cards">
+  <h1>Movies</h1>
+  <div class="cards">
     <%@movies.each do |movie|  %>
-      <%= image_tag(movie.post_url, :class => "card-img-top") %>
-      <%= (movie.title) %>
-      <%= (movie.overview )  %>
-      <%= link_to "Show details", show_path(movie.id) %>
-    <% end %>
+      <div class="card">
+          <%= image_tag(movie.post_url, :class => "card-img-top") %>
+          <p class="title"><%= (movie.title) %></p>
+          <p class="sub"><%= (movie.overview.slice(0, 25) + "...")  %></p>
+          <div class="card-bottom">
+            <%= link_to "Show details", show_path(movie.id) %>
+            <p class="rating"><%= (movie.rating) %></p>
+          </div>
+      </div>
+      <% end %>
   </div>
 </div>
